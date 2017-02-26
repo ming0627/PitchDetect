@@ -101,7 +101,8 @@ function getUserMedia(dictionary, callback) {
         navigator.getUserMedia = 
         	navigator.getUserMedia ||
         	navigator.webkitGetUserMedia ||
-        	navigator.mozGetUserMedia;
+        	navigator.mozGetUserMedia|| 
+		navigator.msGetUserMedia;
         navigator.getUserMedia(dictionary, callback, error);
     } catch (e) {
         alert('getUserMedia threw exception :' + e);
